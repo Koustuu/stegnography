@@ -1,0 +1,105 @@
+/* Pastel Theme */
+body {
+  background-color: #faf9f8; /* Soft pastel background */
+  font-family: 'Poppins', sans-serif;
+  color: #0c0c0c;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 30px;
+}
+
+.scan-text {
+  font-family: 'VT323', monospace;
+  font-size: 90px; /* Adjust size as needed */
+  text-align: center; /* Optional: Center the text */
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Input fields */
+input[type="text"] {
+  width: 850px;
+  height: 96px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #131312;
+  border-radius: 8px;
+  background-color: #fffffe;
+  font-size: 14px;
+  text-align: center;
+  box-align: center;
+  margin-top: 0px;
+}
+input[type="password"]{
+  width: 350px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #131312;
+  border-radius: 8px;
+  background-color: #fffffe;
+  font-size: 14px;
+}
+input[type="file"] {
+  width: 220px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #131312;
+  border-radius: 8px;
+  background-color: #fffffe;
+  font-size: 14px;
+  text-align: center;
+  box-align: center;
+}
+/* Buttons */
+button {
+  background-color: #131212; /* Pastel pink */
+  border: 2px solid #131312;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.g-qr{
+  font-family: 'VT323', monospace;
+  font-size: 25px; /* Adjust size as needed */
+  text-align: center; /* Optional: Center the text */
+  color: #f9f9f9;
+
+}
+button:hover {
+  background-color: #ffffff; /* Slightly darker pastel */
+  color: #131212;
+}
+
+/* QR Code */
+img {
+  margin-top: 15px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.rubik {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

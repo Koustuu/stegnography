@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Steganography</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+
+    <h2 class="scan-text">SCAN ME!</h2>
+    <form method="POST">
+        <input type="text" name="message" placeholder="Enter secret message" required>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button type="submit" name="action" value="generate_qr" class="g-qr">Generate QR Code</button>
+    </form>
+
+    {% if qr_code %}
+    <h3>Generated QR Code:</h3>
+    <img src="{{ url_for('static', filename=qr_code) }}" alt="QR Code">
+
+    <a href="{{ url_for('download_qr', filename=qr_code) }}" download>
+        <button type="button">Download QR Code</button>
+    </a>
+{% endif %}  
+
+
+    <hr>
+
+    <h2 class="rubik">Decode QR Code</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="qr_image" accept="image/png" required >
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button type="submit" name="action" value="decode_qr" class="g-qr" >Decode QR Code</button>
+    </form>
+
+    {% if decoded_message %}
+        <h3 class="rubik">Decoded Message:</h3>
+        <p>{{ decoded_message }}</p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    
+</body>
+</html>
