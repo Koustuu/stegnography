@@ -14,3 +14,10 @@ This project explores steganography using QR codes, allowing users to hide secre
 - Python-based implementation with OpenCV and other relevant libraries
 
 This project is useful for secure communication, watermarking, and covert data transmission in a visually inconspicuous way.
+
+
+## PACKAGES TO INSTALL
+python -m pip install opencv-python
+python -m pip install qrcode[pil]
+python -m pip install pyzbar
+
